@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Transfer Example</title>
+
+<style>
+
+    .baba{
+        border:2px solid black;
+        background-color: cadetblue;
+        box-shadow: 2px 3px 2px yellow;
+        
+    }
+    .ninja{
+        border: 2px solid black ;
+        background-color: aqua;
+        box-shadow: 2px 3px 2px rgb(176, 145, 21);
+        display:none;
+    }
+
+    .sh:hover{
+       background-color: chartreuse;
+    }
+    
+</style>
+</head>
+<body>
+
+    <div class="baba">
+  <label for="input1">Name</label>
+  <input type="text" id="input1"><br><br>
+  
+  <label for="input2">Age</label>
+  <input type="age"  min="1" max="100" id="input2"><br><br>
+  
+  
+</div>
+
+<button onclick="transferData()", class="sh">Transfer Data</button>
+  <br>
+
+ <div class="ninja">
+  <label for="input3">naam aaja</label>
+  <input type="text" id="input3"><br><br>
+  
+  <label for="input4">age aaja</label>
+  <input type="text" id="input4"><br><br>
+</div>
+  <script>
+    function transferData(){
+   const x=document.querySelector('.input1').value;
+   const y=document.querySelector('.input2').value;
+   document.querySelector('.input3')=x
+   document.querySelector('.input4')=y
+
+   document.querySelector('.ninja').style.display="block";
+    }
+
+</script>
+</body> 
+</html>   
